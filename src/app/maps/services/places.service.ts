@@ -9,7 +9,7 @@ export class PlacesService {
   public userLocation?: [number, number];
 
   get isUserLocationReady(): boolean {
-    return !!this.isUserLocationReady;
+    return !!this.userLocation;
   }
 
   constructor() {
