@@ -16,6 +16,9 @@
             "outputPath": "dist/maps-app",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "mapbox-gl"
+            ],
             "polyfills": [
               "zone.js"
             ],
