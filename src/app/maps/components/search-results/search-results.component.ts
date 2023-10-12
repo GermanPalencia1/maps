@@ -28,7 +28,18 @@ export class SearchResultsComponent {
   flyTo(place: Feature) {
     this.selectedId = place.id;
     const [lng, lat] = place.center;
-    this.mapService.flyTo([lng, lat]);
+    this.
+    mapService.flyTo([lng, lat]);
+  }
+
+  getDirections(place: Feature) {
+
+    if(!this.placesService.userLocation) throw Error('No hay userLocation');
+
+    const start = this.placesService.userLocation;
+    const end = place.center as [number, number];
+
+    this.mapService.getRouteBetweenPoints(start, end);
   }
 
 }
